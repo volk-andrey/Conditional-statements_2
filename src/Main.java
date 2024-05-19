@@ -11,15 +11,15 @@ public class Main {
         System.out.println("Task 2");
         int year = 2015;
         int clientDeviceYear = 2014;
-        int clientOS2 = 1;
+        clientOS = 1;
         boolean clientDevice = (clientDeviceYear < year);
-        if (!clientDevice && clientOS2 == 0) {
+        if (!clientDevice && clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (!clientDevice && clientOS2 == 1) {
+        } else if (!clientDevice && clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientDevice && clientOS2 == 0) {
+        } else if (clientDevice && clientOS == 0) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (clientDevice && clientOS2 == 1) {
+        } else if (clientDevice && clientOS == 1) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
 
@@ -38,7 +38,20 @@ public class Main {
         System.out.println("Task 4");
         int deliveryDistance = 95;
         int deliveryDays = 1;
-        if (deliveryDistance < 20) {
+        if (deliveryDistance <= 100) {
+            if (deliveryDistance > 20) {
+                deliveryDays++;
+            }
+            if (deliveryDistance > 60) {
+                deliveryDays++;
+            }
+            System.out.println("Потребуется дней: " + deliveryDays);
+        } else {
+            System.out.println("Доставки нет");
+        }
+
+
+/*        if (deliveryDistance < 20) {
             System.out.println("Потребуется дней: " + deliveryDays);
         } else if (deliveryDistance < 60) {
             deliveryDays++;
@@ -48,7 +61,8 @@ public class Main {
             System.out.println("Потребуется дней: " + deliveryDays);
         } else {
             System.out.println("Доставки нет");
-        }
+        }*/
+
 
         System.out.println("Task 5");
         int monthNumber = 12;
